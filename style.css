@@ -1,0 +1,34 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+/* top header */
+
+.header {
+	background-color: blue;
+	padding: 1rem;
+	color: white;
+	display: flex;
+	justify-content: space-around;
+}
+
+.header > .flex {
+	display: flex;
+}
+
+.header > .flex > div {
+	margin: 0 1rem;
+}
+
+.header > .flex > div > a {
+	color: yellow;
+	text-decoration: none;
+	font-size: 0.8rem;
+}
+
+/* Navigation bar */
+
+#time {
+	color: yellow;
+}
