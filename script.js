@@ -1,3 +1,34 @@
+const light = document.getElementById("light")
+const dark = document.getElementById("dark")
+const moon = document.getElementById("moon")
+const sun = document.getElementById("sun")
+const body = document.body
+
+light.onclick = () => {
+	body.classList.replace('dark', 'light')
+}
+
+dark.onclick = () => {
+	body.classList.replace('light', 'dark')
+}
+
+moon.onclick = () => {
+	body.classList.replace('light', 'dark')
+	moon.classList.add('hidden')
+	sun.classList.remove('hidden')
+}
+
+sun.onclick = () => {
+	body.classList.replace('dark', 'light')
+	sun.classList.add('hidden')
+	moon.classList.remove('hidden')
+}
+
+function navToggle() {
+	const nav = document.getElementById("nav_list")
+	nav.classList.toggle("nav_list_active")
+}
+
 function showDate() {
 	const dateDisplay = document.getElementById("date")
 	const timeDisplay = document.getElementById("time")
@@ -35,3 +66,4 @@ function showDate() {
 }
 
 setInterval(showDate, 1000)
+
