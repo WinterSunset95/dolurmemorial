@@ -2,18 +2,16 @@
 
 /* Theming */
 .dark {
-	--foreground: #f0ebd8;
-	--background: #0d1321;
-	--primary: #748cab;
-	--secondary: #1d2d44;
-	--accent: #3e5c76;
+	--color: #ffffff;
+	--primary: #50514f;
+	--secondary: #2c14a3;
+	--accent: yellow;
 }
 
 .light {
-	--foreground: #ffffff;
-	--background: #2c14a3;
-	--primary: #5bc0be;
-	--secondary: #50514f;
+	--color: #000000;
+	--primary: #ffffff;
+	--secondary: #5bc0be;
 	--accent: #ff6392;
 }
 
@@ -21,20 +19,20 @@
 	padding: 0;
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
-	transition: background 0.5s ease-in-out, color 1s ease-in-out;
+	transition: background 0.5s ease-in-out, color 0.3s ease;
 }
 
 body {
-	background-color: var(--secondary);
-	color: var(--primary);
+	background-color: var(--primary);
+	color: var(--color);
 }
 
 /* top header */
 
 .header {
-	background-color: var(--background);
+	background-color: var(--secondary);
 	padding: 1rem;
-	color: var(--foreground);
+	color: var(--color);
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -51,7 +49,7 @@ body {
 }
 
 .header > .flex > div > a {
-	color: yellow;
+	color: var(--accent);
 	text-decoration: none;
 	font-size: 0.8rem;
 }
@@ -73,7 +71,7 @@ nav > .nav_list {
 	flex-direction: column;
 	width: 100%;
 	height: 100%;
-	background-color: var(--background);
+	background-color: var(--secondary);
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -86,7 +84,7 @@ nav > .nav_list > li {
 }
 
 nav > .nav_list > li > a {
-	color: var(--foreground);
+	color: var(--color);
 	text-decoration: none;
 }
 
@@ -108,16 +106,16 @@ nav > .nav_list > .close {
 }
 
 .nav_toggle > svg path {
-	fill: var(--foreground);
+	fill: var(--color);
 }
 
 nav > .nav_toggle:active {
-	background-color: var(--gray1);
+	background-color: var(--secondary);
 }
 
 .nav_dropdown {
 	position: relative;
-	color: var(--foreground);
+	color: var(--color);
 }
 
 .nav_dropdown:focus-within ul {
@@ -135,7 +133,7 @@ nav > .nav_toggle:active {
 	display: flex;
 	padding: 1rem;
 	border-radius: 0 0 0.5rem 0.5rem;
-	background-color: var(--background);
+	background-color: var(--primary);
 }
 
 .nav_dropdown > ul > li {

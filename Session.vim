@@ -13,13 +13,13 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +188 style.css
-badd +68 index.html
-badd +18 script.js
+badd +22 style.css
+badd +67 index.html
+badd +69 script.js
 argglobal
 %argdel
 $argadd style.css
-edit script.js
+edit style.css
 argglobal
 balt index.html
 setlocal fdm=manual
@@ -32,12 +32,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 27 - ((25 * winheight(0) + 18) / 36)
+let s:l = 25 - ((20 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 27
-normal! 0
+keepjumps 25
+normal! 06|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
