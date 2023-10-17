@@ -163,6 +163,50 @@ nav > .nav_toggle:active {
 	background-color: black;
 }
 
+/* Home image gallery */
+.image_gallery {
+	display: flex;
+	position: relative;
+	margin: 3rem;
+}
+
+.image_container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.image_desc {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.image_desc > .text {
+	display: flex;
+	justify-content: start;
+	align-items: flex-end;
+	padding: 3rem;
+}
+
+.image {
+	width: 100%;
+	overflow: hidden;
+}
+
+.image > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.image_inactive {
+	opacity: 0;
+}
+
 /* Extras */
 .theme_switcher {
 	position: fixed;
