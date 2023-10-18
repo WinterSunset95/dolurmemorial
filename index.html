@@ -82,19 +82,19 @@
 		<section class="image_gallery">
 			<div class="buttons_container">
 				<div class="buttons">
-					<div class="button">
+					<div class="button" onclick="galleryPrevious()">
 						<svg width="100%" height="100%" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 							<path fill="#000000" d="m4 10l9 9l1.4-1.5L7 10l7.4-7.5L13 1z"/>
 						</svg>
 					</div>
-					<div class="button">
+					<div class="button" onclick="galleryNext()">
 						<svg width="100%" height="100%" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 							<path fill="#000000" d="M7 1L5.6 2.5L13 10l-7.4 7.5L7 19l9-9z"/>
 						</svg>
 					</div>
 				</div>
 			</div>
-			<div class="image_container image_inactive">
+			<div class="image_container image_inactive" data-index=0>
 				<div class="image_container_content">
 					<div class="content">
 						<div class="image_desc">
@@ -106,7 +106,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="image_container">
+			<div class="image_container" data-index=1>
 				<div class="image_container_content">
 					<div class="content">
 						<div class="image_desc">
@@ -118,7 +118,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="image_container image_inactive">
+			<div class="image_container image_inactive" data-index=2>
 				<div class="image_container_content">
 					<div class="content">
 						<div class="image_desc">

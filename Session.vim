@@ -13,16 +13,16 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +317 style.css
-badd +220 index.html
-badd +97 script.js
+badd +20 style.css
+badd +89 index.html
+badd +150 script.js
 argglobal
 %argdel
 $argadd style.css
-edit index.html
+edit style.css
 argglobal
-balt style.css
-setlocal fdm=manual
+balt index.html
+setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -30,14 +30,28 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 221 - ((31 * winheight(0) + 18) / 36)
+5
+normal! zo
+15
+normal! zo
+133
+normal! zo
+224
+normal! zo
+247
+normal! zo
+262
+normal! zo
+275
+normal! zo
+285
+normal! zo
+let s:l = 10 - ((9 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 221
-normal! 014|
+keepjumps 10
+normal! 025|
 lcd ~/Desktop/apache/dolurmemorial
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
