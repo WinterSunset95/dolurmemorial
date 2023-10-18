@@ -23,7 +23,7 @@
 		</div>
 	</section>
 
-	<nav>
+	<nav id="nav">
 		<div class="logo">
 			Logo
 		</div>
@@ -56,6 +56,20 @@
 			<li><a href="#">Courses</a></li>
 			<li><a href="#">Admissions</a></li>
 			<li><a href="#">Contact</a></li>
+			<li>
+				<div class="theme_switcher md_hidden">
+					<div class="icon hidden" id="moon">
+						<svg width="100%" height="100%" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+							<path fill="#000000" d="M235.54 150.21a104.84 104.84 0 0 1-37 52.91A104 104 0 0 1 32 120a103.09 103.09 0 0 1 20.88-62.52a104.84 104.84 0 0 1 52.91-37a8 8 0 0 1 10 10a88.08 88.08 0 0 0 109.8 109.8a8 8 0 0 1 10 10Z"/>
+						</svg>
+					</div>
+					<div class="icon" id="sun">
+						<svg width="100%" height="100%" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+							<path fill="#eab308" d="M120 40V16a8 8 0 0 1 16 0v24a8 8 0 0 1-16 0Zm8 24a64 64 0 1 0 64 64a64.07 64.07 0 0 0-64-64Zm-69.66 5.66a8 8 0 0 0 11.32-11.32l-16-16a8 8 0 0 0-11.32 11.32Zm0 116.68l-16 16a8 8 0 0 0 11.32 11.32l16-16a8 8 0 0 0-11.32-11.32ZM192 72a8 8 0 0 0 5.66-2.34l16-16a8 8 0 0 0-11.32-11.32l-16 16A8 8 0 0 0 192 72Zm5.66 114.34a8 8 0 0 0-11.32 11.32l16 16a8 8 0 0 0 11.32-11.32ZM48 128a8 8 0 0 0-8-8H16a8 8 0 0 0 0 16h24a8 8 0 0 0 8-8Zm80 80a8 8 0 0 0-8 8v24a8 8 0 0 0 16 0v-24a8 8 0 0 0-8-8Zm112-88h-24a8 8 0 0 0 0 16h24a8 8 0 0 0 0-16Z"/>
+						</svg>
+					</div>
+				</div>
+			</li>
 		</ul>
 		<div class="nav_toggle md_hidden" onclick="navToggle()">
 			<svg width="100%" height="100%" viewBox="0 0 1536 1280" xmlns="http://www.w3.org/2000/svg">
@@ -64,46 +78,147 @@
 		</div>
 	</nav>
 
-	<section class="image_gallery">
-		<div class="image_container">
-			<div class="image_desc">
-				<div class="text">
-					This is the first image, and here is the description <br>
-					∈∃∫↔←↓→≪
+	<main>
+		<section class="image_gallery">
+			<div class="buttons_container">
+				<div class="buttons">
+					<div class="button">
+						<svg width="100%" height="100%" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+							<path fill="#000000" d="m4 10l9 9l1.4-1.5L7 10l7.4-7.5L13 1z"/>
+						</svg>
+					</div>
+					<div class="button">
+						<svg width="100%" height="100%" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+							<path fill="#000000" d="M7 1L5.6 2.5L13 10l-7.4 7.5L7 19l9-9z"/>
+						</svg>
+					</div>
 				</div>
 			</div>
-			<div class="image"><img src="./assets/home/first.jpg" alt=""></div>
-		</div>
-		<div class="image_container image_inactive">
-			<div class="image_desc">
-				<div class="text">
-					This will be the description for the second image
+			<div class="image_container image_inactive">
+				<div class="image_container_content">
+					<div class="content">
+						<div class="image_desc">
+							<div class="text">
+								This is the first image, and here is the description
+							</div>
+						</div>
+						<div class="image"><img src="./assets/home/first.jpg" alt=""></div>
+					</div>
 				</div>
 			</div>
-			<div class="image"><img src="./assets/home/second.jpg" alt=""></div>
-		</div>
-		<div class="image_container image_inactive">
-			<div class="image_desc">
-				<div class="text">
-					And here is the third image
+			<div class="image_container">
+				<div class="image_container_content">
+					<div class="content">
+						<div class="image_desc">
+							<div class="text">
+								This will be the description for the second image
+							</div>
+						</div>
+						<div class="image"><img src="./assets/home/second.jpg" alt=""></div>
+					</div>
 				</div>
 			</div>
-			<div class="image"><img src="./assets/home/third.jpg" alt=""></div>
-		</div>
+			<div class="image_container image_inactive">
+				<div class="image_container_content">
+					<div class="content">
+						<div class="image_desc">
+							<div class="text">
+								And here is the third image
+							</div>
+						</div>
+						<div class="image"><img src="./assets/home/third.jpg" alt=""></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="notifications">
+			<div class="section_headers" onclick="toggleSection('notifications', 'notification_toggles')">
+				<span>Notifications</span>
+				<div class="section_toggles" id="notification_toggles">
+					<div class="hidden">
+						<svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path fill="#000000" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"/>
+						</svg>
+					</div>
+					<div class="">
+						<svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path fill="#000000" d="M19 12.998H5v-2h14z"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<ul id="notifications" class="section_list">
+				<li>Welcome to Dolur Memorial College</li>
+				<li>This is our landing page</li>
+				<li>This here is the notifications section</li>
+				<li>We post important notifications here</li>
+				<li>This website is cool</li>
+			</ul>
+		</section>
+
+		<section class="news">
+			<div class="section_headers" onclick="toggleSection('news', 'news_toggles')">
+				<span>News and Current Affairs</span>
+				<div class="section_toggles" id="news_toggles">
+					<div class="hidden">
+						<svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path fill="#000000" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"/>
+						</svg>
+					</div>
+					<div class="">
+						<svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path fill="#000000" d="M19 12.998H5v-2h14z"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<ul id="news" class="section_list">
+				<li>This is the news section</li>
+				<li>It will be like the notifications section, but with more casual news</li>
+				<li>We will have many more sections like this</li>
+				<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut laborum deleniti nisi non fugit voluptatem dicta reprehenderit atque! Est alias possimus repellat saepe dolores quia fuga nisi unde ullam delectus?</li>
+				<li>Lorem ipsum yada yada yada</li>
+			</ul>
+		</section>
+
+		<section class="syllabusdetails">
+			<div class="section_headers" onclick="toggleSection('syllabi', 'syllabi_toggles')">
+				<span>Syllabi Details</span>
+				<div class="section_toggles" id="syllabi_toggles">
+					<div class="">
+						<svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path fill="#000000" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"/>
+						</svg>
+					</div>
+					<div class="hidden">
+						<svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path fill="#000000" d="M19 12.998H5v-2h14z"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<ul id="syllabi" class="section_list section_inactive">
+				<li>B.A Education Syllabus</li>
+				<li>Syllabus of B.A/B.Sc Semester System in Anthropology</li>
+				<li>Computer Sciences</li>
+				<li>Zoology Honors</li>
+				<li>Lorem ipsum yada yada yada</li>
+			</ul>
+		</section>
+	</main>
+
+	<section class="footer">
+		Copyright © 2023. This is the official Website of Dolur Memorial College, Pherzawl, Manipur, <br>
+		an undergraduate college under the Department of University and Higher Education, Government of Manipur
+
+		<br><br>
+		Last reviewed and updated on: 18th October 2023
 	</section>
 
-	<div class="theme_switcher md_hidden">
-		<div class="icon hidden" id="moon">
-			<svg width="100%" height="100%" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-				<path fill="#000000" d="M235.54 150.21a104.84 104.84 0 0 1-37 52.91A104 104 0 0 1 32 120a103.09 103.09 0 0 1 20.88-62.52a104.84 104.84 0 0 1 52.91-37a8 8 0 0 1 10 10a88.08 88.08 0 0 0 109.8 109.8a8 8 0 0 1 10 10Z"/>
-			</svg>
-		</div>
-		<div class="icon" id="sun">
-			<svg width="100%" height="100%" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-				<path fill="#eab308" d="M120 40V16a8 8 0 0 1 16 0v24a8 8 0 0 1-16 0Zm8 24a64 64 0 1 0 64 64a64.07 64.07 0 0 0-64-64Zm-69.66 5.66a8 8 0 0 0 11.32-11.32l-16-16a8 8 0 0 0-11.32 11.32Zm0 116.68l-16 16a8 8 0 0 0 11.32 11.32l16-16a8 8 0 0 0-11.32-11.32ZM192 72a8 8 0 0 0 5.66-2.34l16-16a8 8 0 0 0-11.32-11.32l-16 16A8 8 0 0 0 192 72Zm5.66 114.34a8 8 0 0 0-11.32 11.32l16 16a8 8 0 0 0 11.32-11.32ZM48 128a8 8 0 0 0-8-8H16a8 8 0 0 0 0 16h24a8 8 0 0 0 8-8Zm80 80a8 8 0 0 0-8 8v24a8 8 0 0 0 16 0v-24a8 8 0 0 0-8-8Zm112-88h-24a8 8 0 0 0 0 16h24a8 8 0 0 0 0-16Z"/>
-			</svg>
-		</div>
-	</div>
+	<section class="developer">
+		<a target="blank" href="https://wintersunset95.github.io">Designed and developed by <span>Mark L.F Tlau @ Infotech B. Street</span></a>
+	</section>
 
 	<script src="script.js"></script>
 </body>

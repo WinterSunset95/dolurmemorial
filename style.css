@@ -1,4 +1,4 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* Theming */
 .dark {
@@ -6,6 +6,9 @@
 	--primary: #50514f;
 	--secondary: #2c14a3;
 	--accent: yellow;
+	--gradient: linear-gradient(45deg, #2c14a3, rgba(0, 0, 0, 0));
+	--text-background: #2c14a350;
+	--text-shadow: 0 0 3rem #2c14a3;
 }
 
 .light {
@@ -13,6 +16,7 @@
 	--primary: #ffffff;
 	--secondary: #5bc0be;
 	--accent: #ff6392;
+	--gradient: linear-gradient(45deg, #5bc0be, rgba(0, 0, 0, 0));
 }
 
 * {
@@ -75,6 +79,7 @@ nav > .nav_list {
 	position: fixed;
 	top: 0;
 	right: 0;
+	z-index: 2;
 	transition: 0.2s ease-in-out;
 	transform: translateX(100%);
 }
@@ -105,7 +110,7 @@ nav > .nav_list > .close {
 	padding: 0.5rem;
 }
 
-.nav_toggle > svg path {
+svg path {
 	fill: var(--color);
 }
 
@@ -163,18 +168,76 @@ nav > .nav_toggle:active {
 	background-color: black;
 }
 
+/* The main section */
+main {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	padding-bottom: 2rem;
+}
+
 /* Home image gallery */
 .image_gallery {
+	grid-column: 1/13;
 	display: flex;
 	position: relative;
-	margin: 3rem;
+	width: 100%;
+	height: 25rem;
+	z-index: 1;
+}
+
+.buttons_container {
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.buttons {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 25rem;
+	height: 20rem;
+	padding: 1rem;
+}
+
+.button {
+	width: 1rem;
+	height: 1rem;
+	cursor: pointer;
+	padding: 0.5rem 0;
+	background-color: var(--primary);
+}
+
+.button:hover {
+	padding: 0.5rem;
 }
 
 .image_container {
 	position: absolute;
-	top: 0;
 	left: 0;
+	right: 0;
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.image_container_content {
+	width: fit-content;
+	position: relative;
+	padding: 1rem;
+}
+
+.content {
+	position: relative;
+	width: fit-content;
+	overflow: hidden;
 }
 
 .image_desc {
@@ -183,23 +246,36 @@ nav > .nav_toggle:active {
 	left: 0;
 	width: 100%;
 	height: 100%;
+
+	font-size: 1.5rem;
+
 	display: flex;
 	justify-content: start;
 	align-items: flex-end;
+
+	background-image: var(--gradient);
 }
 
 .image_desc > .text {
 	width: 50%;
 	height: 50%;
-	padding: 1rem;
+	padding: 2rem;
 	display: flex;
 	justify-content: start;
 	align-items: flex-end;
+	border-top-right-radius: 10rem;
+	background-color: var(--text-background);
+	box-shadow: var(--text-shadow);
 }
 
 .image {
 	width: 100%;
 	overflow: hidden;
+	max-width: 25rem;
+	max-height: 20rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .image > img {
@@ -212,9 +288,77 @@ nav > .nav_toggle:active {
 	opacity: 0;
 }
 
+/* Notifications section */
+.notifications {
+	grid-column: 1/13;
+	padding: 0 2rem;
+}
+
+/* News Section */
+.news {
+	grid-column: 1/13;
+	padding: 0 2rem;
+}
+
+/* Syllabi Details */
+.syllabusdetails {
+	grid-column: 1/13;
+	padding: 0 2rem;
+}
+
+/* For all main sections */
+.section_headers {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid var(--color);
+	padding: 1rem 0;
+	margin-bottom: 1rem;
+	cursor: pointer;
+}
+
+.section_toggles > div {
+	width: 1rem;
+	height: 1rem;
+}
+
+.section_list {
+	transition: all 0.5s ease-in-out;
+	list-style-type: disc;
+}
+
+.section_inactive {
+	height: 0;
+	overflow: hidden;
+}
+
+/* Footer */
+.footer {
+	background-color: var(--secondary);
+	padding: 2rem;
+	color: var(--color);
+	text-align: center;
+}
+
+/* Developer */
+.developer {
+	padding: 1rem;
+	text-align: right;
+	background-color: black;
+	color: white;
+}
+
+.developer > a {
+	color: white;
+}
+
+.developer > a > span {
+	text-decoration: underline;
+}
+
 /* Extras */
 .theme_switcher {
-	position: fixed;
+	position: absolute;
 	bottom: 1rem;
 	right: 1rem;
 }
@@ -234,9 +378,24 @@ ul {
 .hidden {
 	display: none;
 }
+.sticky {
+	position: fixed;
+	top: 1rem;
+	z-index: 1;
+	width: 100%;
+}
 
 /* Media queries */
 @media only screen and (min-width: 600px) {
+	.buttons {
+		max-width: 35rem;
+	}
+	.image {
+		max-width: 35rem;
+	}
+	.image_desc {
+		font-size: 2rem;
+	}
 }
 
 @media only screen and (min-width: 768px) {
@@ -255,6 +414,18 @@ ul {
 		background: none;
 	}
 
+	.buttons {
+		max-width: 50rem;
+	}
+	.image {
+		max-width: 50rem;
+	}
+
+	.image_desc {
+		font-size: 2.5rem;
+	}
+
+	/* Extras */
 	.sm_hidden {
 		display: initial;
 	}
@@ -264,6 +435,19 @@ ul {
 }
 
 @media only screen and (min-width: 992px) {
+	/* Gallery */
+	.image_gallery {
+		grid-column: 1/9;
+	}
+
+	/* Notifications section */
+	.notifications {
+		grid-column: 9/13;
+	}
+
+	.news, .syllabusdetails {
+		grid-column: span 6;
+	}
 }
 
 @media only screen and (min-width: 1200px) {

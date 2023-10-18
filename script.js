@@ -3,6 +3,19 @@ const dark = document.getElementById("dark")
 const moon = document.getElementById("moon")
 const sun = document.getElementById("sun")
 const body = document.body
+const nav = document.getElementById("nav")
+
+// sticky on scroll
+//let sticky = nav.offsetTop
+//window.onscroll = () => {
+//	if (window.scrollY > sticky) {
+//		nav.classList.add("sticky")
+//	} else {
+//		nav.classList.remove("sticky")
+//	}
+//}
+
+// theme switcher
 
 light.onclick = () => {
 	body.classList.replace('dark', 'light')
@@ -24,6 +37,8 @@ sun.onclick = () => {
 	moon.classList.remove('hidden')
 }
 
+// nav toggle
+//
 function navToggle() {
 	const nav = document.getElementById("nav_list")
 	nav.classList.toggle("nav_list_active")
@@ -63,6 +78,22 @@ function showDate() {
 	const displayTime = `${hours}:${minutes}:${seconds}`
 	dateDisplay.innerHTML = displayDate
 	timeDisplay.innerHTML = displayTime
+}
+
+// Section toggle
+
+function toggleSection(id, buttons) {
+	const sectionElement = document.getElementById(id)
+	const buttonsElementList = document.getElementById(buttons).children
+	sectionElement.classList.toggle("section_inactive")
+
+	for (let i=0; i<buttonsElementList.length; i++) {
+		if (buttonsElementList[i].classList.contains("hidden")) {
+			buttonsElementList[i].classList.remove("hidden")
+		} else {
+			buttonsElementList[i].classList.add("hidden")
+		}
+	}
 }
 
 setInterval(showDate, 1000)
