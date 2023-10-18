@@ -283,7 +283,8 @@ main {
 
 .image > img {
 	width: 100%;
-	object-fit: fill;
+	min-height: 20rem;
+	object-fit: cover;
 }
 
 .image_inactive {
@@ -334,12 +335,61 @@ main {
 	overflow: hidden;
 }
 
+/* The Divisor */
+.divisor {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2rem 0;
+}
+
+.divisor > .line {
+	width: 50%;
+	height: 0.1rem;
+	background-color: var(--color);
+}
+
+/* Information Section */
+.information {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+.info, .links {
+	grid-column: span 12;
+	padding: 0 2rem;
+}
+
+.information h1 {
+	margin: 1rem 0;
+}
+
+.information ul {
+	padding-left: 2rem;
+	list-style-type: disc;
+}
+
+.information a {
+	color: var(--color);
+	text-decoration: none;
+}
+
+.information a:hover {
+	text-decoration: underline;
+}
+
+.information p {
+	margin: 1rem 0;
+}
+
 /* Footer */
 .footer {
 	background-color: var(--secondary);
 	padding: 2rem;
 	color: var(--color);
 	text-align: center;
+	margin-top: 2rem;
 }
 
 /* Developer */
@@ -445,6 +495,14 @@ ul {
 	/* Notifications section */
 	.notifications {
 		grid-column: 9/13;
+	}
+
+	.info {
+		grid-column: span 8;
+	}
+
+	.links {
+		grid-column: span 4;
 	}
 
 	.news, .syllabusdetails {

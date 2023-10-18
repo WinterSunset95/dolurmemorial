@@ -13,8 +13,8 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +20 style.css
-badd +89 index.html
+badd +382 style.css
+badd +236 index.html
 badd +150 script.js
 argglobal
 %argdel
@@ -30,13 +30,11 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-5
-normal! zo
-15
-normal! zo
 133
 normal! zo
 224
+normal! zo
+235
 normal! zo
 247
 normal! zo
@@ -46,12 +44,40 @@ normal! zo
 normal! zo
 285
 normal! zo
-let s:l = 10 - ((9 * winheight(0) + 18) / 36)
+340
+normal! zo
+348
+normal! zo
+355
+normal! zo
+360
+normal! zo
+365
+normal! zo
+369
+normal! zo
+374
+normal! zo
+379
+normal! zo
+383
+normal! zo
+388
+normal! zo
+454
+normal! zo
+490
+normal! zo
+501
+normal! zo
+505
+normal! zo
+let s:l = 385 - ((25 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 10
-normal! 025|
+keepjumps 385
+normal! 0
 lcd ~/Desktop/apache/dolurmemorial
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
