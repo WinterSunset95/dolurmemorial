@@ -1,0 +1,42 @@
+/* Extras */
+.theme_switcher {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+}
+.icon {
+	width: 3rem;
+	height: 3rem;
+}
+ul {
+	list-style-type: none;
+}
+.sm_hidden {
+	display: none;
+}
+.md_hidden {
+	display: initial;
+}
+.hidden {
+	display: none;
+}
+.sticky {
+	position: fixed;
+	top: 1rem;
+	z-index: 1;
+	width: 100%;
+}
+
+svg path {
+	fill: var(--color);
+}
+
+@media only screen and (min-width: 768px) {
+	/* Extras */
+	.sm_hidden {
+		display: initial;
+	}
+	.md_hidden {
+		display: none !important;
+	}
+}

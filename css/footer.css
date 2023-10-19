@@ -1,0 +1,25 @@
+/* Footer */
+.footer {
+	background-color: var(--secondary);
+	padding: 2rem;
+	color: var(--color);
+	text-align: center;
+	margin-top: 2rem;
+}
+
+/* Developer */
+.developer {
+	padding: 1rem;
+	text-align: right;
+	background-color: black;
+	color: white;
+}
+
+.developer > a {
+	color: white;
+}
+
+.developer > a > span {
+	text-decoration: underline;
+}
+
