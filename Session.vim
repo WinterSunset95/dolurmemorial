@@ -26,9 +26,8 @@ badd +21 about.html
 badd +16 about_us.css
 badd +10 dolurmemorial/index.html
 badd +28 gallery.html
-badd +18 gallery.js
+badd +1 gallery.js
 badd +8 gallery.css
-badd +1 secrets.js
 badd +1 .gitignore
 argglobal
 %argdel
@@ -46,12 +45,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 18) / 36)
+let s:l = 4 - ((3 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 059|
+keepjumps 4
+normal! 010|
 lcd ~/Desktop/apache/dolurmemorial
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
