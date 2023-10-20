@@ -1,0 +1,36 @@
+.main_header {
+	padding: 2rem;
+	background-color: var(--secondary);
+}
+
+a {
+	color: var(--accent);
+	text-decoration: none;
+}
+
+#mainGallery {
+	columns: 2;
+	column-gap: 1rem;
+	break-inside: avoid;
+	margin-top: 1rem;
+}
+
+.gallery-item {
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+.gallery-item img {
+	width: 100%;
+}
+
+main {
+	padding: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+	#mainGallery {
+		columns: 4;
+		margin-top: 2rem;
+	}
+}

@@ -14,22 +14,28 @@ else
   set shortmess=aoO
 endif
 badd +220 style.css
-badd +136 index.html
+badd +8 index.html
 badd +1 script.js
 badd +34 css/header.css
 badd +1 css/footer.css
-badd +24 js/header.js
+badd +84 js/header.js
 badd +24 js/footer.js
 badd +1 css/extras.css
 badd +5 css/global.css
 badd +21 about.html
-badd +17 about_us.css
+badd +16 about_us.css
+badd +10 dolurmemorial/index.html
+badd +28 gallery.html
+badd +18 gallery.js
+badd +8 gallery.css
+badd +1 secrets.js
+badd +1 .gitignore
 argglobal
 %argdel
 $argadd style.css
-edit about_us.css
+edit gallery.js
 argglobal
-balt about.html
+balt gallery.css
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -40,12 +46,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 17 - ((16 * winheight(0) + 18) / 36)
+let s:l = 1 - ((0 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 17
-normal! 019|
+keepjumps 1
+normal! 059|
 lcd ~/Desktop/apache/dolurmemorial
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
