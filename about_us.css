@@ -1,0 +1,22 @@
+.main_header {
+	padding: 1rem;
+	background-color: var(--secondary);
+}
+
+.main_header a {
+	text-decoration: none;
+	color: var(--accent);
+}
+
+h1, h2, p, ol {
+	color: var(--color);
+	margin: 1rem 0;
+}
+
+ol {
+	padding-left: 2rem;
+}
+
+main {
+	padding: 2rem;
+}

@@ -29,6 +29,11 @@
 }
 
 /* Navigation bar */
+.logo {
+	text-decoration: none;
+	color: var(--color);
+}
+
 nav {
 	display: flex;
 	justify-content: space-between;

@@ -21,9 +21,9 @@ class Header extends HTMLElement {
 	</section>
 
 	<nav id="nav">
-		<div class="logo">
+		<a href="/" class="logo">
 			Logo
-		</div>
+		</a>
 		<ul class="nav_list" id="nav_list">
 			<div class="close md_hidden">
 				<li class="nav_toggle" onclick="navToggle()">
